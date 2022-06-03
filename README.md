@@ -56,7 +56,7 @@ We are going to include the full HTML code here again. The Javascript part is wi
 
 1.	Add jQuery from a CDN (lines 5–8)
 We need to ensure the FULL jQuery library is included in our HTML to use AJAX.
-<script  src="https://code.jquery.com/jquery-3.4.1.js"  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="  crossorigin="anonymous"></script>
+'''<script  src="https://code.jquery.com/jquery-3.4.1.js"  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="  crossorigin="anonymous"></script>'''
 2. Write the SubForm() function between two script tags (lines 9–23)
 The SubForm() function is below. You will replace the URL below with the URL you obtained in Step 3. The rest of the function will remain the same. We will go through this function in more detail at the end of this post but for now all you need to know is if the data was successfully saved an alert will pop up saying Form Data Submitted :) otherwise an alert will pop up saying There was an error :(.
 
