@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Save Web Form Data to Spreadsheets</title>
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <script>
+    function SubForm (){
+      $.ajax({
+        url:"https://api.apispreadsheets.com/data/umPHLYeOHZ3jJbtJ/",
+        type:"post",
+        data:$("#myForm").serializeArray(),
+        success: function(){
+          alert("Form Data Submitted :)")
+        },
+        error: function(){
+          alert("There was an error :(")
+        }
+      });
+    }
+  </script>
+  <style>
+    body {font-family: Arial, Helvetica, sans-serif}
+    * {box-sizing: border-box;}
+
+    .bg-img {
+      /* The image used */
+      background-image: url(header.png);
+
+      min-height: 180px;
+
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      
+      /* Needed to position the navbar */
+      position: relative;
+    }
+
+    /* Position the navbar container inside the image */
+    .container {
+      position: absolute;
+      padding: 50px 50px;
+      margin: 20px;
+      width: auto;
+      font-size: 27px;
+    }
+
+    /* The navbar */
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    /* Navbar links */
+    .topnav a {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 4px 6px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+.btn {
+  background-color: #1CC7A0;  /*#4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 28px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.btn {width: 350px;}
+  </style>
+</head>
+<body>
+  <div class="bg-img">
+  <div class="container">
+  </div>
+  </div>
+  <div class="container cols=3">
+    <form id="myForm">
+      <label>Date  &nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <input name="Date" type="date" value="2022-30-05">
+
+      <br><br>
+      <label>Email  &nbsp;</label>
+      
+      <input name="Email" />
+      <br><br>
+
+      <label>Principle Investigator  &nbsp;</label>
+      <input name="Principle_investigator" />
+      
+      <br><br>
+
+      <label>Project Identifier  &nbsp;</label>
+      <input name="Project_identifier">
+
+      <br><br>
+      <label>Institution  &nbsp;</label>
+      
+      <input name="Institution" />
+      <br><br>
+      <label>Sample type  &nbsp;</label>
+      
+      <input name="Sample_type" />
+      <br><br>
+      <label>Number of groups  &nbsp;</label>
+      
+      <input name="Num_groups" />
+      <br><br>
+      <label>Number of samples  &nbsp;</label>
+      
+      <input name="Num_samples" />
+      <br><br>
+      <label>Organism  &nbsp;&nbsp;</label>
+      
+      <input name="Organism" />
+      <br><br>
+      <label> Project Desciption  </label>
+      <br>
+      <!-- <input name="Description"> -->
+      <textarea name="Description" rows="4" cols="50">  
+      </textarea>
+      <br><br>
+      <label for="service">Service_type  </label>
+      <br>
+      <input type="radio" id="service" name="Service_type" value="DIA" /> DIA <br>
+      <input type="radio" id="service" name="Service_type" value="TMT" /> TMT <br> 
+      <input type="radio" id="service" name="Service_type" value="Phospho" /> Phospho <br>
+      <br>
+      <label>Project cost &nbsp; </label>
+      
+      <input name="Project_cost" />
+      <br><br>
+      <label>Date of Completion  &nbsp;</label>
+      
+      <input name="Completion_date" />
+      <br>
+      <br><br>
+      <br>
+    </form>
+    <button class="btn button" onclick="SubForm()">Submit</button>
+ </div>
+</body>
+<br>
+<br>
+</html>
