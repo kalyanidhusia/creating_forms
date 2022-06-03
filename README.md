@@ -95,7 +95,7 @@ It should look mostly like this depending on the browser
 An alert window should pop up saying Form Data Submitted :)
  
 Yayy! It worked!
-If the alert window says There was an error :( then feel free to email us at info@lovespreadsheets.com and we can try to help you out.
+If the alert window says There was an error :( then feel free to email us and we can try to help you out.
 3. View your data in your spreadsheet!!
 •	Go to www.apispreadsheet.com
 •	Log in if necessary
